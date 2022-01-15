@@ -31,6 +31,44 @@
       <button class="btn btn-primary mb-3" onclick="dividir()">Dividir</button>
       <div id="resultado"></div>
     </div>
-    <script src="/app.js"></script>
+    <script>
+      function sumar(){
+    const forma = document.getElementById('forma');
+    let operandoA = forma['operandoA'];
+    let operandoB = forma['operandoB'];
+    let resultado = parseInt(operandoA.value) + parseInt(operandoB.value);
+    if(isNaN(resultado))
+    resultado= 'La operación no incluye números'
+    document.getElementById('resultado').innerHTML = `Resultado: ${resultado}`  
+}
+
+function restar(){
+    const forma  = document.getElementById('forma');
+    let operandoA = forma['operandoA'];
+    let operandoB = forma['operandoB'];
+    let resultado = parseInt(operandoA.value) - parseInt(operandoB.value);
+    if(isNaN(resultado))
+    resultado= 'La operación no incluye números'
+    document.getElementById('resultado').innerHTML = `Resultado: ${resultado}`  
+}
+function multiplicar(){
+    const forma  = document.getElementById('forma');
+    let operandoA = forma['operandoA'];
+    let operandoB = forma['operandoB'];
+    let resultado = parseInt(operandoA.value) * parseInt(operandoB.value);
+    if(isNaN(resultado))
+    resultado= 'La operación no incluye números'
+    document.getElementById('resultado').innerHTML = `Resultado: ${resultado}`  
+}
+function dividir(){
+    const forma  = document.getElementById('forma');
+    let operandoA = forma['operandoA'];
+    let operandoB = forma['operandoB'];
+    let resultado = parseFloat(operandoA.value) / parseFloat(operandoB.value);
+    if(isNaN(resultado))
+    resultado= 'La operación no incluye números'
+    document.getElementById('resultado').innerHTML = `Resultado: ${resultado}`  
+}
+    </script>
   </body>
 </html>
